@@ -27,6 +27,7 @@ public class Card implements Comparable<Card> {
         return 0;
     }
 
+    //Returns a string describing the result from calling the compareTo method.
     public String compareWithCard(Card card) {
         switch (this.compareTo(card)) {
             case -1:

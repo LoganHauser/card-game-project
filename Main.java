@@ -7,7 +7,7 @@ public class Main {
         Deck deck = new Deck(); //Create a deck object
         deck.shuffle(); //Shuffle the deck
 
-        ArrayList<Hand> hands = new ArrayList<>();
+        ArrayList<Hand> hands = new ArrayList<>(); //Create an arraylist to store and loop over each hand
         for (int i = 0; i < 5; i++) {
             hands.add(new Hand(5));      //Create 5 hand objects and add
             deck.addCardsToHand(hands.get(i));//random cards to each from the deck
@@ -19,6 +19,7 @@ public class Main {
             hands.get(i).printCards();
         }
 
+        //Example of comparing cards from 2 different hands:
         //Compare hand 3's 5th card with hand 5's 2nd card and print the result.
         System.out.println(hands.get(2).cards.get(4).compareWithCard(hands.get(4).cards.get(1)));
     }
